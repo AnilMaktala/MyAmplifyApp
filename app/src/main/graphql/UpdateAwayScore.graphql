@@ -1,0 +1,7 @@
+mutation UpdateAwayScore($awayScore: Int!, $id: ID!) {
+    updateGame(input: {id: $id, awayScore: $awayScore}) {
+        id
+        homeScore
+        awayScore
+    }
+}

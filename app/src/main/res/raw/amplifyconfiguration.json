@@ -1,0 +1,72 @@
+{
+  "UserAgent": "@aws-amplify/client-config/0.9.0-beta.10",
+  "Version": "1.0",
+  "auth": {
+    "plugins": {
+      "awsCognitoAuthPlugin": {
+        "UserAgent": "@aws-amplify/client-config/0.9.0-beta.10",
+        "Version": "1.0",
+        "CognitoUserPool": {
+          "Default": {
+            "PoolId": "us-east-1_HsneWF06s",
+            "AppClientId": "vq1d13abejgt5cpq5083jnht5",
+            "Region": "us-east-1"
+          }
+        },
+        "CredentialsProvider": {
+          "CognitoIdentity": {
+            "Default": {
+              "PoolId": "us-east-1:b053dd39-5dcc-415f-af00-d2bea083b8fb",
+              "Region": "us-east-1"
+            }
+          }
+        },
+        "Auth": {
+          "Default": {
+            "authenticationFlowType": "USER_SRP_AUTH",
+            "passwordProtectionSettings": {
+              "passwordPolicyMinLength": 8,
+              "passwordPolicyCharacters": [
+                "REQUIRES_NUMBERS",
+                "REQUIRES_LOWERCASE",
+                "REQUIRES_UPPERCASE",
+                "REQUIRES_SYMBOLS"
+              ]
+            },
+            "signupAttributes": [
+              "EMAIL"
+            ],
+            "usernameAttributes": [
+              "EMAIL"
+            ],
+            "verificationMechanisms": [
+              "EMAIL"
+            ]
+          }
+        },
+        "AppSync": {
+          "Default": {
+            "ApiUrl": "https://524yirzyevfx3nkpdxl2rdb42q.appsync-api.us-east-1.amazonaws.com/graphql",
+            "Region": "us-east-1",
+            "AuthMode": "API_KEY",
+            "ApiKey": "da2-oh7xcvy57ffatj27ryyihigcnu",
+            "ClientDatabasePrefix": "data_API_KEY"
+          }
+        }
+      }
+    }
+  },
+  "api": {
+    "plugins": {
+      "awsAPIPlugin": {
+        "data": {
+          "endpointType": "GraphQL",
+          "endpoint": "https://524yirzyevfx3nkpdxl2rdb42q.appsync-api.us-east-1.amazonaws.com/graphql",
+          "region": "us-east-1",
+          "authorizationType": "API_KEY",
+          "apiKey": "da2-oh7xcvy57ffatj27ryyihigcnu"
+        }
+      }
+    }
+  }
+}

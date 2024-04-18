@@ -1,0 +1,7 @@
+subscription MySubscription {
+    onUpdateGame {
+        id
+        homeScore
+        awayScore
+    }
+}

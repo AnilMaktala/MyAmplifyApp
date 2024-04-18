@@ -1,0 +1,15 @@
+query QueryGames {
+    listGames {
+        items {
+            id
+            awayScore
+            homeScore
+            awayTeam {
+                name
+            }
+            homeTeam {
+                name
+            }
+        }
+    }
+}

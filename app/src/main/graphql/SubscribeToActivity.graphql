@@ -1,0 +1,8 @@
+subscription OnCreateActivity {
+    onCreateActivity {
+        time
+        id
+        gameActivitiesId
+        event
+    }
+}
